@@ -1,0 +1,19 @@
+/*Общее оформление текста*/
+
+.products-title,
+.team-title,
+.clients-title {
+  padding-bottom: 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-title,
+.clients-title {
+  display: inline-block;
+}

@@ -1,0 +1,87 @@
+/*///////////////SITE-AUTH/////////////*/
+.site-auth {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  & .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/ {
+    margin-left: 30px;
+  }
+}
+/*.site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/
+/*{
+  margin-left: 30px;
+}*/
+
+.auth-list_link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  &:hover,
+  &:focus {
+    color: var(--title-text-color);
+    fill: var(--title-text-color);
+  }
+}
+
+.auth-list_icona {
+  width: 16px;
+  height: 12px;
+}
+
+.auth-list_iconb {
+  width: 10px;
+  height: 16px;
+}
+.auth-list_icona,
+.auth-list_iconb {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.auth-list_link {
+  display: flex;
+  align-items: center;
+}
+
+.social-list_link {
+  &:hover,
+  &:focus {
+    background-color: var(--title-text-color);
+  }
+  &:hover .social-list_icon,
+  &:focus .social-list_icon {
+    fill: var(--hero-color);
+  }
+}
+
+/*Иконки через Before 
+.icon-mail,
+.icon-telephone {
+  display: flex;
+}*/
+/*.icon-mail::before {
+  content: "";
+  display: block;
+  background-image: url(../images/imgsprite/mail.svg);
+  height: 12px;
+  width: 16px;
+  fill: currentColor;
+}
+.icon-telephone::before {
+  content: "";
+  display: block;
+  background-image: url(../images/imgsprite/smartphone.svg);
+  height: 16px;
+  width: 10px;
+  fill: currentColor;
+}*/
+
+/*.icon-mail:hover::before,
+.icon-mail:focus::before,
+.icon-telephone:hover::before,
+.icon-telephone:focus::before {
+  content: "";
+  fill: var(--title-text-color);
+}*/

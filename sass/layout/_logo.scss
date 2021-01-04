@@ -1,0 +1,30 @@
+/*/ ///////////////LOGO////////////*/
+.logo {
+  color: var(--title-text-color);
+  font-family: Raleway, cursive;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.main-nav .logo {
+  margin-right: 93px;
+}
+.logo-web {
+  color: #000000;
+}
+
+/*.logo-web:hover,
+.logo-web:focus {
+  color: var(--title-text-color);
+}*/
+
+.logo-footer-accent {
+  color: #ffffff;
+}
+
+/*.logo-footer-accent:hover,
+.logo-footer-accent:focus {
+  color: var(--title-text-color);
+}*/

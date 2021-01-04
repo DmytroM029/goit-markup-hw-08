@@ -1,0 +1,44 @@
+/*/////////////////////portfolio.html////////////////////////*/
+
+/*filter*/
+
+.filter-buttom_list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+  padding-bottom: 8px;
+  & .item + .item {
+    margin-left: 8px;
+  }
+}
+
+.filter-button {
+  color: var(--primary-text-color);
+  background-color: #f5f4fa;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.43;
+  text-align: center;
+  letter-spacing: 0.03em;
+  display: block;
+  text-align: center;
+  /*outline: 1px solid red;*/
+  min-width: 50px;
+  text-align: center;
+  padding: 6px 22px;
+  border-radius: 5px; /*задаёт округление кнопки*/
+  border: 1px solid transparent;
+  outline: none; /*убираем рамку*/
+
+  &:hover,
+  &:focus {
+    color: var(--hero-color);
+    background-color: var(--title-text-color);
+    font-family: inherit;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/*.filter-buttom_list .item + .item {
+  margin-left: 8px;
+}*/

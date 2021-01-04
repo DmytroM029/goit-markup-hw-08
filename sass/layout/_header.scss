@@ -1,0 +1,14 @@
+/*/////////////////////HEADER///////////////////*/
+.header {
+  border: 1px solid #ececec;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-nav,
+.site-nav {
+  display: flex;
+  align-items: center;
+}
