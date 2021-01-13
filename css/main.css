@@ -71,9 +71,26 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding: 0 15px;
   /*или padding-left: 15px; padding-right: 15px;*/
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 :root {
@@ -796,8 +813,6 @@ textarea {
   justify-content: center;
   align-items: center;
   /*fill: var(--social-link-color);*/
-  width: 270px;
-  height: 120px;
   border-radius: 4px;
   background-color: var(--icon-background-color);
   margin-bottom: 30px;
@@ -808,10 +823,23 @@ textarea {
   border: 1px solid var(--title-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .advantages-icon_link {
+    width: 270px;
+    height: 120px;
+  }
+}
+
 /*Product*/
 /*Значение products-title в общем оформлении текста*/
 .section.products-section {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .section.products-section {
+    display: none;
+  }
 }
 
 .product-list {
@@ -865,9 +893,27 @@ textarea {
 .clients-list {
   /*55:00 https://www.youtube.com/watch?v=ybsPTMtkQp4&feature=youtu.be*/
   padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .clients-list {
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list {
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list:not(:last-child) {
+    margin: -15px;
+  }
 }
 
 .clients-list_link {
@@ -875,7 +921,6 @@ textarea {
   justify-content: center;
   align-items: center;
   fill: var(--social-link-color);
-  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -886,8 +931,27 @@ textarea {
   border: 1px solid var(--title-text-color);
 }
 
-.clients-list_item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .clients-list_item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list_item {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list_item {
+    max-width: 170px;
+  }
+  .clients-list_item:not(:last-child) {
+    margin: 15px;
+  }
 }
 
 /*Footer*/
@@ -897,8 +961,10 @@ textarea {
   background-color: #2f303a;
 }
 
-.footer-list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    display: flex;
+  }
 }
 
 .footer-maps {
@@ -1081,19 +1147,44 @@ textarea {
 }
 
 /*/////Team/////*/
-.team-list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .team-list .item {
-  display: inline-block;
+  max-width: 280px;
+  /*display: inline-block;*/
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list .item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .team-list .item {
+    max-width: 280px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .team-list .item {
+    margin-bottom: 30px;
+  }
 }
 
 /*.team-list {

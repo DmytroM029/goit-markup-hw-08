@@ -71,9 +71,26 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding: 0 15px;
   /*или padding-left: 15px; padding-right: 15px;*/
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 :root {
@@ -482,8 +499,10 @@ width: 370px;
   background-color: #2f303a;
 }
 
-.footer-list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    display: flex;
+  }
 }
 
 .footer-maps {
