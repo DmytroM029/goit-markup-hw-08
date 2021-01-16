@@ -542,8 +542,6 @@ textarea {
   background-color: #2f303a;
   text-align: center;
   justify-content: center;
-  max-width: 1600px;
-  min-height: 600px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
   background-repeat: no-repeat;
   /*48:55 мин https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
@@ -561,12 +559,12 @@ textarea {
 .hero-title {
   color: var(--hero-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 200px 252px;
+  padding-top: 118px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0px;
@@ -574,6 +572,20 @@ textarea {
   /*max-width: 696px;*/
   align-content: center;
   animation-duration: 1800ms;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    padding: 118px 189px 0px 189px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    padding: 200px 252px 0px 252px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /*Button*/
@@ -594,7 +606,7 @@ textarea {
   padding: 10px 32px;
   min-width: 50px;
   margin-top: 30px;
-  margin-bottom: 200px;
+  margin-bottom: 118px;
   cursor: pointer;
   border: 1px solid transparent;
   outline: none;
@@ -605,6 +617,12 @@ textarea {
   color: var(--title-text-color);
   background-color: var(--hero-color);
   font-family: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    margin-bottom: 200px;
+  }
 }
 
 /*/ ///////////////LOGO////////////*/
