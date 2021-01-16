@@ -3,6 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+  text-align: center;
 }
 
 .footer-list {
@@ -10,7 +11,12 @@
     display: flex;
   }
 }
-
+.footer-list_tab {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .footer-maps {
   color: var(--hero-color);
   font-style: normal;
@@ -28,10 +34,13 @@
 }
 
 .footer-first_item {
-  margin-right: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 
 .footer-address-list {
+  margin-bottom: 60px;
   & .item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -42,7 +51,6 @@
 
 /*!!!!!!!!!!footer-second_item!!!!!!!!!*/
 .footer-social {
-  width: 206px;
   display: block;
   &_title {
     /*42:00 https://www.youtube.com/watch?v=8rDA1NfOqEs&feature=youtu.be*/
@@ -52,16 +60,28 @@
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.142;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 20px;
     padding-top: 10px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 206px;
   }
 }
 
 .footer-social_list {
   display: flex;
+  text-align: center;
+  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 
   & .footer-list_item:not(:last-child) {
     margin-right: 10px;
@@ -99,7 +119,10 @@
 
 .footer-form_item {
   display: block;
-  margin-left: 120px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 120px;
+  }
 
   & .footer-form_title {
     display: inline-block;
@@ -117,13 +140,15 @@
 }
 
 .footer-form_input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   & .footer-input {
     display: flex;
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding-left: 16px;
     /* padding-top: 15px;
@@ -138,6 +163,12 @@
     align-items: center;
     background-color: #2f303a;
     color: #ffffff;
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
 
     & input::placeholder {
       font-family: Roboto;
