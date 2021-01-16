@@ -77,19 +77,19 @@ textarea {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -464,16 +464,16 @@ textarea {
   border: 1px solid #ececec;
 }
 
-.header .container {
+/*.header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
+}*/
 .main-nav,
 .site-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /*Hero*/
