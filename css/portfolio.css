@@ -138,6 +138,13 @@ textarea {
   align-items: center;
   justify-content: space-between;
 }*/
+.main-nav,
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .main-nav {
   min-height: 80px;
 }
@@ -175,21 +182,24 @@ textarea {
   font-size: 20px;
 }
 
+.menu-container.is-open {
+  display: block;
+}
+
 @media screen and (max-width: 767px) {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  .is-open {
-    display: block;
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 768px) {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+  }
 }
 
 /*/ ///////////////LOGO////////////*/

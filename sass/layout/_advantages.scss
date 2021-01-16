@@ -5,18 +5,22 @@
 .advantages-list {
   display: flex;
   flex-wrap: wrap; /*(29:42) https://www.youtube.com/watch?v=GezCqjS6SKo&feature=youtu.be*/
-  margin-left: -30px;
+
   /*margin-top: -30px;*/
   text-align: start;
   /*  flex-wrap: wrap;
   margin-left: -10px;
   margin-top: -10px;
   flex-basis: calc(100% / 3 - 10px);*/
+  margin: -15px;
 }
 
 .advantages-list-item {
+  margin: 15px;
   @media screen and (max-width: 767px) {
-    height: 120px;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
   }
   @media screen and (min-width: 1200px) {
     flex-basis: calc(
@@ -24,7 +28,6 @@
     ); /*7:00:00 https://drive.google.com/file/d/1mQW8d7rKEsReSolvmg-kIhsIiiTtFx5x/view*/
     /*margin-top: 30px;*/
     &:not(:first-child) {
-      margin-left: 30px;
     }
   }
 }
@@ -94,6 +97,11 @@
   text-transform: uppercase;
   margin-top: 0px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 
 .advantages-content {
@@ -113,7 +121,7 @@
   /*fill: var(--social-link-color);*/
   border-radius: 4px;
   background-color: var(--icon-background-color);
-  margin-bottom: 30px;
+  padding: 25px 142px;
 
   &:hover,
   &:focus {
@@ -121,7 +129,6 @@
     border: 1px solid var(--title-text-color);
   }
   @media screen and (min-width: 1200px) {
-    width: 270px;
-    height: 120px;
+    padding: 25px 100px;
   }
 }
