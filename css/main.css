@@ -960,6 +960,12 @@ textarea {
   border: 1px solid var(--title-text-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages-icon_link {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .advantages-icon_link {
     padding: 25px 100px;
