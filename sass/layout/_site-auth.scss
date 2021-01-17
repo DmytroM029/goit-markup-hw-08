@@ -1,7 +1,9 @@
 /*///////////////SITE-AUTH/////////////*/
 .site-auth {
-  display: flex;
   margin-left: auto;
+
+@media screen and (min-width: 1200px) {
+  display: flex;
   align-items: center;
   & .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/ {
     margin-left: 30px;
@@ -26,23 +28,36 @@
 }
 
 .auth-list_icona {
-  width: 16px;
-  height: 12px;
+  width: 14px;
+  height: 10px;
+  @media screen and (min-width: 768px) {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .auth-list_iconb {
   width: 10px;
-  height: 16px;
+  height: 14px;
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 16px;
+  }
 }
 .auth-list_icona,
 .auth-list_iconb {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
 }
 
 .auth-list_link {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .social-list_link {
@@ -83,5 +98,4 @@
 .icon-telephone:hover::before,
 .icon-telephone:focus::before {
   content: "";
-  fill: var(--title-text-color);
-}*/
+  fill: var(--title-text-color);}*/

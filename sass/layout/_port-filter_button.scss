@@ -4,11 +4,22 @@
 
 .filter-buttom_list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 34px;
-  padding-bottom: 8px;
-  & .item + .item {
-    margin-left: 8px;
+  flex-wrap: wrap;
+
+  & .item {
+    margin: 0px 4px;
+  }
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
   }
 }
 
@@ -20,15 +31,15 @@
   line-height: 1.43;
   text-align: center;
   letter-spacing: 0.03em;
-  display: block;
   text-align: center;
   /*outline: 1px solid red;*/
-  min-width: 50px;
   text-align: center;
   padding: 6px 22px;
   border-radius: 5px; /*задаёт округление кнопки*/
   border: 1px solid transparent;
   outline: none; /*убираем рамку*/
+  @media screen and (min-width: 768px) {
+  }
 
   &:hover,
   &:focus {

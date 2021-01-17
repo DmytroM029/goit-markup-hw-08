@@ -8,17 +8,23 @@
   align-items: center;
   justify-content: space-between;
 }*/
-.main-nav,
-.site-nav {
+.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 60px;
 }
-.main-nav {
-  min-height: 80px;
+
+.site-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
+
 .menu-button {
-  display: inline-block;
+  display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
@@ -55,5 +61,7 @@
   }
   @media screen and (min-width: 768px) {
     display: flex;
+    text-align: center;
+    justify-content: space-between;
   }
 }

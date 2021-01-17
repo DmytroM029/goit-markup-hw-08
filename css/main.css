@@ -486,19 +486,23 @@ textarea {
   align-items: center;
   justify-content: space-between;
 }*/
-.main-nav,
-.site-nav {
+.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 60px;
 }
 
-.main-nav {
-  min-height: 80px;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .menu-button {
-  display: inline-block;
+  display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
@@ -547,6 +551,8 @@ textarea {
 @media screen and (min-width: 768px) {
   .menu-container {
     display: flex;
+    text-align: center;
+    justify-content: space-between;
   }
 }
 
@@ -558,11 +564,41 @@ textarea {
   background-color: #2f303a;
   text-align: center;
   justify-content: center;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/1x/hero-1x.jpg);
   background-repeat: no-repeat;
   /*48:55 мин https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
   /*background-position: center;*/
   background-size: cover;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/1x/hero-2x.jpg);
+  }
+}
+
+@media (min-width: 489px) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/1x/hero_tablet-1x.jpg);
+  }
+}
+
+@media (min-width: 489px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url(../images/1x/hero_tablet-2x.jpg);
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/1x/hero_desk-1x.jpg);
+  }
+}
+
+@media (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url(../images/1x/hero_desk-2x.jpg);
+  }
 }
 
 .hero-section .container {
@@ -576,11 +612,11 @@ textarea {
   color: var(--hero-color);
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.61;
+  line-height: 1.615;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 118px;
+  padding: 118px 30px 0px 30px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0px;
@@ -651,10 +687,6 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.main-nav .logo {
-  margin-right: 93px;
-}
-
 .logo-web {
   color: #000000;
 }
@@ -677,7 +709,7 @@ textarea {
   /*outline: 1px solid red;*/
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .site-nav .item + .item {
     margin-left: 50px;
   }
@@ -685,6 +717,7 @@ textarea {
 
 .site-nav .link {
   display: block;
+  padding-top: 60px;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 18px;
@@ -701,8 +734,6 @@ textarea {
 @media screen and (max-width: 767px) {
   .site-nav .link {
     display: block;
-    margin-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -740,13 +771,15 @@ textarea {
 
 /*///////////////SITE-AUTH/////////////*/
 .site-auth {
-  display: flex;
   margin-left: auto;
-  align-items: center;
 }
 
-.site-auth .item + .item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  display: flex;
+  align-items: center;
+  .item + .item {
+    margin-left: 30px;
+  }
 }
 
 /*.site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/
@@ -767,24 +800,47 @@ textarea {
 }
 
 .auth-list_icona {
-  width: 16px;
-  height: 12px;
+  width: 14px;
+  height: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .auth-list_icona {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .auth-list_iconb {
   width: 10px;
-  height: 16px;
+  height: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .auth-list_iconb {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .auth-list_icona,
 .auth-list_iconb {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
-.auth-list_link {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .auth-list_icona,
+  .auth-list_iconb {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth-list_link {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .social-list_link:hover, .social-list_link:focus {
@@ -829,7 +885,6 @@ textarea {
 /*1:17:40 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
 .advantages-list {
   display: flex;
-  flex-wrap: wrap;
   /*(29:42) https://www.youtube.com/watch?v=GezCqjS6SKo&feature=youtu.be*/
   /*margin-top: -30px;*/
   text-align: start;
@@ -838,6 +893,12 @@ textarea {
   margin-top: -10px;
   flex-basis: calc(100% / 3 - 10px);*/
   margin: -15px;
+}
+
+@media screen and (max-width: 1199px) {
+  .advantages-list {
+    flex-wrap: wrap;
+  }
 }
 
 .advantages-list-item {
@@ -960,7 +1021,7 @@ textarea {
   border: 1px solid var(--title-text-color);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .advantages-icon_link {
     margin-bottom: 30px;
   }
@@ -1434,7 +1495,6 @@ textarea {
 
 .social-list {
   display: flex;
-  margin: 0px 32px 30px;
   justify-content: center;
 }
 
@@ -1461,5 +1521,6 @@ textarea {
 .social-list_icon {
   width: 20px;
   height: 20px;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -74,7 +74,7 @@
 }
 .social-list {
   display: flex;
-  margin: 0px 32px 30px;
+
   justify-content: center;
 }
 .social-list_link {
@@ -100,4 +100,5 @@
 .social-list_icon {
   width: 20px;
   height: 20px;
+  margin-bottom: 30px;
 }

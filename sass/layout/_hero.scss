@@ -13,10 +13,55 @@
       rgba(47, 48, 58, 0.4)
         /*59:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
     ),
-    url(../images/hero.jpg);
+    url(../images/1x/hero-1x.jpg);
   background-repeat: no-repeat; /*48:55 мин https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
   /*background-position: center;*/
   background-size: cover;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+          /*59:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
+      ),
+      url(../images/1x/hero-2x.jpg);
+  }
+}
+@media (min-width: 489px) {
+  .hero-section {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+          /*59:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
+      ),
+      url(../images/1x/hero_tablet-1x.jpg);
+  }
+  @media (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: url(../images/1x/hero_tablet-2x.jpg);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-section {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+          /*59:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
+      ),
+      url(../images/1x/hero_desk-1x.jpg);
+  }
+  @media (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: url(../images/1x/hero_desk-2x.jpg);
+    }
+  }
 }
 
 .hero-section .container {
@@ -29,11 +74,11 @@
   color: var(--hero-color);
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.61;
+  line-height: 1.615;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 118px;
+  padding: 118px 30px 0px 30px;
 
   margin-left: auto;
   margin-right: auto;

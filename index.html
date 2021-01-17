@@ -33,15 +33,15 @@
             </button>
 
             <div class="menu-container" id="menu-container" data-menu>
-                <div class="navigation">
-                    <ul class="site-nav">
+
+                <ul class="site-nav navigation">
                         <li class="item"><a href="" class="link current">Студия</a></li>
                         <li class="item"><a href="./portfolio.html" class="link jaja">Портфолио</a></li>
                         <li class="item"><a href="" class="link jaja">Контакты</a></li>
                     </ul>
-                </div>
-                <div class="contacts">
-                    <ul class="site-auth">
+                
+                
+                    <ul class="site-auth contacts">
                         <li class="item"><a href="mailto:info@devstudio.com" class="auth-list_link icon-mail">
                                 <svg class="auth-list_icona">
                                     <use href="./images/sprite.svg#mail"></use>
@@ -52,10 +52,9 @@
                                     <use href="./images/sprite.svg#smartphone"></use>
                                 </svg>+38 096 111 11 11</a></li>
                     </ul>
-                </div>
             </div>
             </nav>
-            </div>
+    
     </header>
 <main>
 
@@ -131,7 +130,13 @@
         <ul class="product-list" >
         <li class="item">
             <div class="product-cover">
-                <img src="./images/Notepad.jpg" alt="">
+        <picture>
+        <source srcset="./images/1x/laptop-01.webp 1x, ./images/1x/laptop-01@2x.webp 2x" media="(min-width: 1200px)"
+                        type="image/webp">
+        <source srcset="./images/1x/laptop-01.jpg 1x, ./images/1x/laptop-01@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+        <img src="./images/1x/laptop-01.jpg" alt="">
+        </picture>
                 <div class="product-cover_content">
                     <p>
                         Десктопные приложения
@@ -142,7 +147,12 @@
 
         <li class="item">
         <div class="product-cover">
-        <img src="./images/PhoneLaptop.jpg" alt="">
+        <picture>
+        <source srcset="./images/1x/tel-01.webp 1x, ./images/1x/tel-01@2x.webp 2x" media="(min-width: 1200px)"
+            type="image/webp">
+        <source srcset="./images/1x/tel-01.jpg 1x, ./images/1x/tel-01@2x.jpg 2x" media="(min-width: 1200px)">
+        <img src="./images/1x/tel-01.jpg" alt="">
+        </picture>
         <div class="product-cover_content">
             <p>
                 Мобильные приложения
@@ -153,7 +163,12 @@
         </li>
         <li class="item">
         <div class="product-cover">
-        <img src="./images/Pixel.jpg" alt="">
+        <picture>
+        <source srcset="./images/1x/tab-01.webp 1x, ./images/1x/tab-01@2x.webp 2x" media="(min-width: 1200px)"
+            type="image/webp">
+        <source srcset="./images/1x/tab-01.jpg 1x, ./images/1x/tab-01@2x.jpg 2x" media="(min-width: 1200px)">
+        <img src="./images/1x/tab-01.jpg" alt="">
+        </picture>
         <div class="product-cover_content">
         <p>
             Дизайнерские решения
@@ -218,10 +233,16 @@
         </li>
         <li class="item">
             <picture>
-            
-            
-            
-            <img src="./images/Olha.jpg" alt="Ольга Репина"  width="280" class="teammate-img">
+                <source srcset="./images/1x/img2-desk-01.webp 1x, ./images/1x/img2-desk-01@2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                <source srcset="./images/1x/img2-desk-01.jpg 1x, ./images/1x/img2-desk-01@2x.jpg 2x"
+                    media="(min-width: 1200px)">
+                <source srcset="./images/1x/img2-tablet-01.webp 1x, ./images/1x/img2-tablet-01@2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                <source srcset="./images/1x/img2-tablet-01.jpg 1x, ./images/1x/img2-tablet-01@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/1x/img2-01.webp 1x, ./images/1x/img2-01@2х.webp 2x" media="(max-width: 767px)"
+                    type="image/webp">
+            <img src="./images/1x/img2-01.jpg" alt="Ольга Репина" class="teammate-img">
             </picture>
             <h3 class="teammate-name">Ольга Репина</h3>
             <p lang="en" class="teammate-position">Frontend Developer</p>
@@ -258,10 +279,15 @@
         </li>
         <li class="item">
             <picture>
-               
-               
-            <img src="./images/Nikolay.jpg" alt="Николай Тарасов"  width="280" class="teammate-img">
-            
+                <source srcset="./images/1x/img3-desk-01.webp 1x, ./images/1x/img3-desk-01@2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                <source srcset="./images/1x/img3-desk-01.jpg 1x, ./images/1x/img3-desk-01@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/1x/img3-tablet-01.webp 1x, ./images/1x/img3-tablet-01@2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                <source srcset="./images/1x/img3-tablet-01.jpg 1x, ./images/1x/img3-tablet-01@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/1x/img3-01.webp 1x, ./images/1x/img3-01@2х.webp 2x" media="(max-width: 767px)"
+                    type="image/webp">
+                <img src="./images/Nikolay.jpg" alt="Николай Тарасов" class="teammate-img">
             </picture>
             <h3 class="teammate-name">Николай Тарасов</h3>
             <p lang="en" class="teammate-position">Marketing</p>
@@ -298,9 +324,15 @@
         </li>
         <li class="item">
             <picture>
-            
-            
-            <img src="./images/Michail.jpg" alt="Михаил Ермаков"  width="280" class="teammate-img">
+            <source srcset="./images/1x/img4-desk-01.webp 1x, ./images/1x/img4-desk-01@2x.webp 2x" media="(min-width: 1200px)"
+                type="image/webp">
+            <source srcset="./images/1x/img4-desk-01.jpg 1x, ./images/1x/img4-desk-01@2x.jpg 2x" media="(min-width: 1200px)">
+            <source srcset="./images/1x/img4-tablet-01.webp 1x, ./images/1x/img4-tablet-01@2x.webp 2x" media="(min-width: 768px)"
+                type="image/webp">
+            <source srcset="./images/1x/img4-tablet-01.jpg 1x, ./images/1x/img4-tablet-01@2x.jpg 2x" media="(min-width: 768px)">
+            <source srcset="./images/1x/img4-01.webp 1x, ./images/1x/img4-01@2х.webp 2x" media="(max-width: 767px)"
+                type="image/webp">
+            <img src="./images/Michail.jpg" alt="Михаил Ермаков" class="teammate-img">
             </picture>
             <h3 class="teammate-name">Михаил Ермаков</h3>
             <p lang="en" class="teammate-position">UI Designer</p>

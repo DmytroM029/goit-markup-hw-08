@@ -5,8 +5,7 @@
 .filter-list {
   display: flex;
   flex-wrap: wrap; /*Позволяем элементам перепрыгивать на другие строки, которые по умолчанию располагаются сверху вниз (вдоль поперечной оси).*/
-  margin-top: -30px;
-  margin-left: -30px;
+  margin: -15px;
 }
 
 .card-content {
@@ -16,17 +15,23 @@
 
 .filter-list-item {
   /*57:00https://www.youtube.com/watch?v=c32Jb9Ejz4k&feature=youtu.be*/
-  flex-basis: calc(100% / 3 - 30px); /*width: calc(
+  /*width: calc(
     100%-60px / 3*/
   /*Модуль 3. Вебинар №6. Flexbox 1:00:00 (1:16:00)*/
   /*margin-bottom: 30px;
   margin-right: 30px;*/
-  margin-top: 30px;
-  margin-left: 30px;
+  margin: 15px;
   text-align: start;
-  &:nth-child(3n) {
-    margin-right: 0;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
   }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
   /*ИЛИ
 width: 370px;
   margin-right: 30px;
@@ -37,6 +42,10 @@ width: 370px;
 .filter-list-item:nth-child(-n + 3) {
   margin-right: 0;*/
 } /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
+
+.extra-padding {
+  padding-bottom: 35px;
+}
 
 .filter-thumb {
   /*ДЗ-5*/
@@ -73,16 +82,22 @@ width: 370px;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.555;
   color: var(--hero-color);
   background-color: rgba(33, 150, 243, 0.9);
   /* or 156% */
   letter-spacing: 0.03em;
   /*opacity: 0;*/
   /*transition: 250ms opacity linear;*/
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(+100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }
 
 .filter-list_link {
