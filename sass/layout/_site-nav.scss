@@ -1,15 +1,19 @@
 /*///////////////SITE-NAV/////////*/
+.site-nav {
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+  }
+}
 
 .site-nav .item + .item {
   /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right: 50px; */
   /*outline: 1px solid red;*/
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
 }
 .site-nav .link {
   display: block;
-  padding-top: 60px;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 18px;
@@ -23,10 +27,11 @@
   }
   @media screen and (max-width: 767px) {
     display: block;
+    padding-top: 60px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.142;
   }
 }
 
@@ -46,8 +51,11 @@
     margin-top: 8px;
     background-color: currentColor;
     border-radius: 2px;
+    @media screen and (min-width: 768px) {
+      margin-top: 32px;
+    }
     @media screen and (min-width: 1200px) {
-      margin-top: 28px;
+      margin-top: 20px;
     }
   }
 }

@@ -152,6 +152,12 @@ textarea {
   min-height: 60px;
 }
 
+@media screen and (max-width: 767px) {
+  .main-nav {
+    justify-content: space-between;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
@@ -174,6 +180,11 @@ textarea {
   }
 }
 
+.menu-button:hover, .menu-button:focus {
+  color: var(--title-text-color);
+  fill: var(--title-text-color);
+}
+
 .menu-button .icon-cross {
   display: none;
 }
@@ -187,8 +198,8 @@ textarea {
 }
 
 .menu-container {
-  background-color: #ad3636;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 21px 15px;
   text-align: center;
   font-size: 20px;
 }
@@ -212,6 +223,7 @@ textarea {
     display: flex;
     text-align: center;
     justify-content: space-between;
+    flex-grow: 1;
   }
 }
 
@@ -220,9 +232,16 @@ textarea {
   color: var(--title-text-color);
   font-family: Raleway, cursive;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 .logo-web {
@@ -242,12 +261,18 @@ textarea {
   color: var(--title-text-color);
 }*/
 /*///////////////SITE-NAV/////////*/
+@media screen and (min-width: 768px) {
+  .site-nav {
+    margin-left: 88px;
+  }
+}
+
 .site-nav .item + .item {
   /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right: 50px; */
   /*outline: 1px solid red;*/
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .site-nav .item + .item {
     margin-left: 50px;
   }
@@ -255,7 +280,6 @@ textarea {
 
 .site-nav .link {
   display: block;
-  padding-top: 60px;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 18px;
@@ -272,13 +296,14 @@ textarea {
 @media screen and (max-width: 767px) {
   .site-nav .link {
     display: block;
+    padding-top: 60px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .site-nav .link {
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.142;
   }
 }
 
@@ -299,77 +324,134 @@ textarea {
   border-radius: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  .site-nav .current::after,
+  .site-nav .link:hover::after,
+  .site-nav .link:focus::after {
+    margin-top: 32px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .site-nav .current::after,
   .site-nav .link:hover::after,
   .site-nav .link:focus::after {
-    margin-top: 28px;
+    margin-top: 20px;
   }
 }
 
 /*///////////////SITE-AUTH/////////////*/
 .site-auth {
   margin-left: auto;
+  /*.site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/
+  /*{
+  margin-left: 30px;
+}*/
+}
+
+@media screen and (max-width: 767px) {
+  .site-auth {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  display: flex;
-  align-items: center;
-  .item + .item {
+  .site-auth {
+    display: flex;
+    align-items: center;
+  }
+  .site-auth .item + .item {
     margin-left: 30px;
   }
 }
 
-/*.site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/
-/*{
-  margin-left: 30px;
-}*/
-.auth-list_link {
+@media screen and (min-width: 1200px) and (max-width: 767px) {
+  .site-auth .item + .item {
+    margin-top: 16px;
+  }
+}
+
+.site-auth .auth-list_link {
+  font-family: Roboto;
+  font-style: normal;
   color: var(--text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.166;
   letter-spacing: 0.02em;
 }
 
-.auth-list_link:hover, .auth-list_link:focus {
+@media screen and (min-width: 768px) {
+  .site-auth .auth-list_link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .site-auth .auth-list_link {
+    padding-top: 5px;
+    margin-left: 46px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-auth .auth-list_link {
+    font-size: 14px;
+    line-height: 1.142;
+  }
+}
+
+.site-auth .auth-list_link:hover, .site-auth .auth-list_link:focus {
   color: var(--title-text-color);
   fill: var(--title-text-color);
 }
 
-.auth-list_icona {
-  width: 14px;
-  height: 10px;
+.site-auth .auth-list_icona {
+  width: 16px;
+  height: 12px;
 }
 
-@media screen and (min-width: 768px) {
-  .auth-list_icona {
-    width: 16px;
-    height: 12px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .site-auth .auth-list_icona {
+    width: 14px;
+    height: 10px;
   }
 }
 
-.auth-list_iconb {
+.site-auth .auth-list_iconb {
   width: 10px;
-  height: 14px;
+  height: 15px;
 }
 
 @media screen and (min-width: 768px) {
-  .auth-list_iconb {
+  .site-auth .auth-list_iconb {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-auth .auth-list_iconb {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-auth .auth-list_iconb {
     width: 10px;
     height: 16px;
   }
 }
 
-.auth-list_icona,
-.auth-list_iconb {
+.site-auth .auth-list_icona,
+.site-auth .auth-list_iconb {
   fill: currentColor;
   margin-right: 8px;
 }
 
 @media screen and (min-width: 768px) {
-  .auth-list_icona,
-  .auth-list_iconb {
+  .site-auth .auth-list_icona,
+  .site-auth .auth-list_iconb {
     margin-right: 10px;
   }
 }
@@ -416,8 +498,7 @@ textarea {
 .icon-telephone:hover::before,
 .icon-telephone:focus::before {
   content: "";
-  fill: var(--title-text-color);
-}*/
+  fill: var(--title-text-color);}*/
 /*/////////////////////portfolio.html////////////////////////*/
 /*filter*/
 @media screen and (min-width: 1200px) {
