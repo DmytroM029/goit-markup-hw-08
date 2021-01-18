@@ -30,6 +30,10 @@ body {
   justify-content: center;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /*приминяем ко всем спискам*/
 ul {
   list-style: none;
@@ -164,15 +168,19 @@ textarea {
 
 /*///////////////////Всплываюее окно///////////////*/
 .backdrop {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   /*
   background-color: rgba(33, 150, 243, 0.5)*/
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
 .backdrop.is-hidden {
@@ -182,21 +190,50 @@ textarea {
   /*делаем возможность клика через элемент*/
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
+@media screen and (min-width: 768px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  max-width: 450px;
   height: auto;
   background-color: var(--hero-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 528px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .modal-button {
@@ -227,18 +264,18 @@ textarea {
 }
 
 .form {
-  width: 448px;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  text-align: center;
   /*margin: 40px 40px 12px;*/
 }
 
 .mode-title {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
@@ -259,6 +296,7 @@ textarea {
   line-height: 1.66;
   /* identical to box height */
   letter-spacing: 0.01em;
+  text-align: start;
   color: #757575;
 }
 
@@ -341,8 +379,8 @@ textarea {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.166;
   /* identical to box height, or 171% */
   letter-spacing: 0.03em;
   color: #757575;
@@ -351,19 +389,31 @@ textarea {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-checkbox {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+}
+
 .policy-info {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.166;
   /* identical to box height, or 171% */
+  margin-left: 5px;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: #2196f3;
-  text-align: center;
-  justify-content: center;
-  margin-left: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-info {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .comment {
@@ -406,27 +456,9 @@ textarea {
   height: 15px;
 }*/
 .mode-button {
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 140px;
-  margin-bottom: 40px;
   width: 200px;
-  border-radius: 4px;
-  color: var(--hero-color);
-  background-color: var(--title-text-color);
-  font-family: inherit;
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  padding: 10px 32px;
-  border: 1px solid #2196f3;
-  outline: inherit;
-  cursor: pointer;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .form-field:focus-within > .form-icons,
@@ -440,9 +472,11 @@ textarea {
 .form-checkbox {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .checkbox {
+  display: inline-block;
   -webkit-appearance: none;
   /*1:20:00 https://www.youtube.com/watch?v=wahf3ZcDxV4&feature=youtu.be*/
   -moz-appearance: none;
@@ -469,9 +503,8 @@ textarea {
   display: inline-block;
   width: 16px;
   height: 15px;
-  border-radius: 4px;
+  margin-right: 8px;
   border: 2px solid #000000;
-  margin-right: 7px;
 }
 
 /*===================Кастомный Checkbox END==================*/
@@ -556,6 +589,7 @@ textarea {
     top: 100%;
     left: 0;
     width: 100%;
+    z-index: 1;
   }
 }
 
@@ -571,6 +605,7 @@ textarea {
 /*Hero*/
 .hero-section {
   display: flex;
+  flex-direction: column;
   margin: auto;
   margin-bottom: 0;
   background-color: #2f303a;
@@ -604,6 +639,7 @@ textarea {
 @media (min-width: 769px) {
   .hero-section {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/1x/hero_desk-1x.jpg);
+    background-size: cover;
   }
 }
 
@@ -670,7 +706,6 @@ textarea {
   padding: 10px 32px;
   min-width: 50px;
   margin-top: 30px;
-  margin-bottom: 118px;
   cursor: pointer;
   border: 1px solid transparent;
   outline: none;
@@ -683,10 +718,8 @@ textarea {
   font-family: inherit;
 }
 
-@media screen and (min-width: 1200px) {
-  .button {
-    margin-bottom: 200px;
-  }
+.hero-section .button {
+  margin-bottom: 118px;
 }
 
 /*/ ///////////////LOGO////////////*/
@@ -741,7 +774,7 @@ textarea {
 }
 
 .site-nav .link {
-  display: block;
+  display: inline-block;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 18px;
@@ -757,7 +790,6 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .site-nav .link {
-    display: block;
     padding-top: 60px;
   }
 }

@@ -13,7 +13,7 @@
   }
 }
 .site-nav .link {
-  display: block;
+  display: inline-block;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 18px;
@@ -26,7 +26,6 @@
     color: var(--title-text-color);
   }
   @media screen and (max-width: 767px) {
-    display: block;
     padding-top: 60px;
   }
   @media screen and (min-width: 768px) {

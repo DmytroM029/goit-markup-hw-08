@@ -20,6 +20,10 @@ body {
   justify-content: center;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /*приминяем ко всем спискам*/
 ul {
   list-style: none;

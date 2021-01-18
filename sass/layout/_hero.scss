@@ -1,6 +1,7 @@
 /*Hero*/
 .hero-section {
   display: flex;
+  flex-direction: column;
   margin: auto;
   margin-bottom: 0;
   background-color: #2f303a;
@@ -56,6 +57,7 @@
           /*59:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
       ),
       url(../images/1x/hero_desk-1x.jpg);
+    background-size: cover;
   }
   @media (min-resolution: 2dppx) {
     .hero-section {
@@ -117,7 +119,7 @@
   padding: 10px 32px;
   min-width: 50px;
   margin-top: 30px;
-  margin-bottom: 118px;
+
   cursor: pointer;
   border: 1px solid transparent;
   outline: none;
@@ -128,8 +130,8 @@
     background-color: var(--hero-color);
     font-family: inherit;
   }
+}
 
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 200px;
-  }
+.hero-section .button {
+  margin-bottom: 118px;
 }

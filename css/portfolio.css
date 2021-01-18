@@ -30,6 +30,10 @@ body {
   justify-content: center;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /*приминяем ко всем спискам*/
 ul {
   list-style: none;
@@ -215,6 +219,7 @@ textarea {
     top: 100%;
     left: 0;
     width: 100%;
+    z-index: 1;
   }
 }
 
@@ -279,7 +284,7 @@ textarea {
 }
 
 .site-nav .link {
-  display: block;
+  display: inline-block;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 18px;
@@ -295,7 +300,6 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .site-nav .link {
-    display: block;
     padding-top: 60px;
   }
 }
