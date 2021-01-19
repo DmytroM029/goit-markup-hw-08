@@ -617,8 +617,10 @@ width: 370px;
 }
 
 /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
-.extra-padding {
-  padding-bottom: 35px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .extra-padding {
+    padding-bottom: 35px;
+  }
 }
 
 .filter-thumb {
