@@ -822,7 +822,7 @@ textarea {
   .site-nav .current::after,
   .site-nav .link:hover::after,
   .site-nav .link:focus::after {
-    margin-top: 30px;
+    margin-top: 28px;
   }
 }
 
@@ -830,7 +830,7 @@ textarea {
   .site-nav .current::after,
   .site-nav .link:hover::after,
   .site-nav .link:focus::after {
-    margin-top: 28px;
+    margin-top: 26px;
   }
 }
 
