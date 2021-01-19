@@ -156,9 +156,9 @@ textarea {
   min-height: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .main-nav {
-    justify-content: space-between;
+    min-height: 80px;
   }
 }
 
@@ -340,7 +340,7 @@ textarea {
   .site-nav .current::after,
   .site-nav .link:hover::after,
   .site-nav .link:focus::after {
-    margin-top: 20px;
+    margin-top: 28px;
   }
 }
 
